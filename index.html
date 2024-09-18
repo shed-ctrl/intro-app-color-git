@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Picker</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlace a la fuente Montserrat desde Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">RGB Color Picker</h1>
+        <div class="row">
+            <!-- Descripción de la herramienta -->
+            <div class="col-12 mb-4">
+                <p class="text-center my-4">Autor: Héctor Ruiz Trejo.</p>
+                <p class="text-center">Utiliza las barras deslizantes o los campos de texto para ajustar los valores de rojo, verde y azul. También puedes seleccionar un color directamente usando el selector de color. El recuadro mostrará el color seleccionado junto con sus valores en formato hexadecimal y RGB.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Control deslizante y campo de texto para el color rojo -->
+            <div class="col-md-4 mb-4">
+                <div class="color-box p-3">
+                    <label for="redRange">Rojo</label>
+                    <input type="range" class="form-control-range" id="redRange" min="0" max="255" value="0">
+                    <input type="number" class="form-control mt-2" id="redInput" min="0" max="255" value="0">
+                    <p class="description">Ajusta la intensidad del color rojo.</p>
+                </div>
+            </div>
+            <!-- Control deslizante y campo de texto para el color verde -->
+            <div class="col-md-4 mb-4">
+                <div class="color-box p-3">
+                    <label for="greenRange">Verde</label>
+                    <input type="range" class="form-control-range" id="greenRange" min="0" max="255" value="0">
+                    <input type="number" class="form-control mt-2" id="greenInput" min="0" max="255" value="0">
+                    <p class="description">Ajusta la intensidad del color verde.</p>
+                </div>
+            </div>
+            <!-- Control deslizante y campo de texto para el color azul -->
+            <div class="col-md-4 mb-4">
+                <div class="color-box p-3">
+                    <label for="blueRange">Azul</label>
+                    <input type="range" class="form-control-range" id="blueRange" min="0" max="255" value="0">
+                    <input type="number" class="form-control mt-2" id="blueInput" min="0" max="255" value="0">
+                    <p class="description">Ajusta la intensidad del color azul.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col">
+                <!-- Input de tipo color para seleccionar el color -->
+                <div class="color-box p-3">
+                    <input type="color" class="form-control" id="colorPicker" value="#000000">
+                    <p class="description">Selecciona un color directamente.</p>
+                </div>
+                <!-- Recuadro que muestra el color seleccionado y los resultados en texto -->
+                <div id="colorBox" class="border mt-3 d-flex flex-column align-items-center justify-content-center" style="height: 150px;">
+                    <p class="text-center mb-1">Código Hexadecimal: <span id="hexCode">#000000</span></p>
+                    <p class="text-center">Valor RGB: <span id="rgbValue">rgb(0, 0, 0)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Enlace al archivo JavaScript personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
