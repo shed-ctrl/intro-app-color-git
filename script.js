@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const rgbValue = document.getElementById('rgbValue');
     const colorPicker = document.getElementById('colorPicker');
 
+    
+
     // Función para actualizar el color y los códigos
     function updateColor() {
         // Obtener los valores de los controles deslizantes
